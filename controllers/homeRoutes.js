@@ -3,18 +3,18 @@ const { Post, User } = require("../models");
 
 router.get("/", async (req, res) => {
     try {
-        const blogData = await Post.findAll({
-            attributes: [title, content, dateCreated],
-            include: [
-                {
-                    model: User,
-                    attributes: ["userName"],
-                },
-            ],
-            raw: true,
-        });
+        //const blogData = await Post.findAll({
+        //    attributes: [title, content, dateCreated],
+        //    include: [
+        //        {
+        //            model: User,
+        //            attributes: ["userName"],
+        //        },
+        //    ],
+        //    raw: true,
+        //});
 
-        res.render("homepage", { posts: blogData });
+        res.render("homepage");
 
     } catch (err) {
         res.status(500).json(err);
