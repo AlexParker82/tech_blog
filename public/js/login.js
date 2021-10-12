@@ -3,21 +3,25 @@ $(function () {
     const userLogin = $("#user-login");
     const passwordLogin = $("#password-login");
     const loginBtn = $("#login");
-    const emailSignup =$("#email-signup")
+    const emailSignup = $("#email-signup")
     const userSignup = $("#name-signup");
     const passwordSignup = $("#password-signup");
     const signupBtn = $("#signup");
 
     const loginHandler = async () => {
         const email = userLogin.val().trim();
-        const password = passwordLogin.val().trim();       
+        const password = passwordLogin.val().trim();
 
         $.ajax({
             method: "POST",
             url: "/api/user/login",
-            data: { email: email, password: password }
-        }).done(function () {
-            location.replace("/");
+            data: { email: email, password: password },
+            error: function () {
+                alert("login failed!")
+            },
+            complete: function () {
+                location.replace("/");
+            },
         });
     };
 
@@ -31,19 +35,23 @@ $(function () {
         $.ajax({
             method: "POST",
             url: "/api/user/",
-            data: { email: email, userName: userName, password: password }
-        }).done(function (response) {
-            console.log(response);
+            data: { email: email, userName: userName, password: password },
+            error: function () {
+                alert("login failed!")
+            },
+            complete: function () {
+                location.replace("/");
+            },
         });
     };
 
 
-    loginBtn.click(function(e) {
+    loginBtn.click(function (e) {
         e.preventDefault();
         loginHandler();
     });
 
-    signupBtn.click(function(e) {
+    signupBtn.click(function (e) {
         e.preventDefault();
         signupHandler();
     });

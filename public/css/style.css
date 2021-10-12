@@ -21,8 +21,9 @@ a#logout:hover {
 
 }
 
-div.post {
+div.main-post {
     border: 1px solid black;
+    border-radius: 5px;
 }
 
 div.user-post {
