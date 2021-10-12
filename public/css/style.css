@@ -1,0 +1,32 @@
+h1.jumbo {
+    font-family: 'Faster One', cursive;
+    font-size: 100px;
+}
+
+h1.new-post {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: coral;
+}
+
+li.nav-item {
+    border-radius: 5px;
+    margin: 5px;
+    background-color: white;
+}
+
+a#logout:hover {
+    cursor: pointer;
+
+}
+
+div.post {
+    border: 1px solid black;
+}
+
+div.user-post {
+    background-color: lightcyan;
+    border: 1px solid black;
+    border-radius: 5px;
+}
