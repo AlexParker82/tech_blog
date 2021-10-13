@@ -24,6 +24,31 @@ router.get("/", async (req, res) => {
     }
 });
 
+router.get("/comment/:id", async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, 
+            {
+                include: [
+                    {
+                        model: User,
+                        attributes: ["userName"]
+                    }
+                ]
+            });
+
+        const post = postData.get({ plain: true });
+
+        res.render("comment", {
+            post,
+            loggedIn: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+
+    }
+});
+
+
 router.get("/login", async (req, res) => {
     try {
         if (req.session.loggedIn) {
@@ -56,16 +81,16 @@ router.get("/dashboard", async (req, res) => {
     }
 });
 
-router.get("/post/:id", async (req,res) => {
+router.get("/post/:id", async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id);
 
         const post = postData.get({ plain: true });
 
-        res.render("editPost", { 
+        res.render("editPost", {
             post,
             loggedIn: true
-         });
+        });
     } catch (err) {
         res.status(500).json(err);
 
