@@ -1,5 +1,7 @@
 # **Tech Blog**
-      
+
+      ![tech_blog](https://user-images.githubusercontent.com/82096138/137519922-511c8794-86b4-4175-a451-1500b1309af7.png)
+
 ![badge](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Table of Contents
