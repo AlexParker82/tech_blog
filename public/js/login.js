@@ -7,7 +7,7 @@ $(function () {
     const userSignup = $("#name-signup");
     const passwordSignup = $("#password-signup");
     const signupBtn = $("#signup");
-
+// function for logging in
     const loginHandler = async () => {
         const email = userLogin.val().trim();
         const password = passwordLogin.val().trim();
@@ -24,7 +24,7 @@ $(function () {
             },
         });
     };
-
+// function for creating account
     const signupHandler = async () => {
         const email = emailSignup.val().trim();
         const userName = userSignup.val().trim();

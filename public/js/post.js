@@ -6,8 +6,7 @@ $(function () {
     const deleteBtn = $("#delete");
     const toastDiv = $(".toast-add");
     const toastUpdate = $(".toast-update");
-    const toastDelete = $(".toast-delete");
-
+// function for creating a post
     const postSubmitHandler = () => {
         const title = titleInput.val().trim();
         const content = contentInput.val().trim();
@@ -23,7 +22,7 @@ $(function () {
 
         });
     };
-
+// function for editingh a post 
     const postUpdateHandler = () => {
         const title = titleInput.val().trim();
         const content = contentInput.val().trim();
@@ -41,7 +40,7 @@ $(function () {
 
         });
     };
-
+// function for deleting a post
     const postDeleteHandler = () => {
         let url = $(location).attr("href");
         let id = url.split("/").at(-1);

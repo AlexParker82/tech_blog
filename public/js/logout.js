@@ -1,6 +1,6 @@
 $(function () {
     const logoutBtn = $("#logout");
-
+// function for logging out of session
     const logout = async () => {
         const response = await $.ajax({
             url: '/api/user/logout',
