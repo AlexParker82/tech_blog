@@ -19,7 +19,7 @@
 Full stack application for creating blog posts. Ability to create an account with your email, username, and password.  You can create, edit, and delete your posts and view other users posts.
 
 ## Installation
-N/A
+
 
 ## Heroku URL
 https://fast-bayou-39670.herokuapp.com/
